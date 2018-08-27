@@ -1,6 +1,14 @@
 {
   "application.css": "/packs/application-986529d46c2860244faf23ff0bb7c8b7.css",
   "application.css.map": "/packs/application-986529d46c2860244faf23ff0bb7c8b7.css.map",
-  "application.js": "/packs/application-0e795f7b101312d7f8fb.js",
-  "application.js.map": "/packs/application-0e795f7b101312d7f8fb.js.map"
+  "application.js": "/packs/application-aa31ae8e45325c4154d1.js",
+  "application.js.map": "/packs/application-aa31ae8e45325c4154d1.js.map",
+  "customers.js": "/packs/customers-d0927189a361bff6d02c.js",
+  "customers.js.map": "/packs/customers-d0927189a361bff6d02c.js.map",
+  "hello_angular.js": "/packs/hello_angular-fb94a6515177a604ecb4.js",
+  "hello_angular.js.map": "/packs/hello_angular-fb94a6515177a604ecb4.js.map",
+  "hello_typescript.js": "/packs/hello_typescript-0f23e1e3f3c7ca983e4c.js",
+  "hello_typescript.js.map": "/packs/hello_typescript-0f23e1e3f3c7ca983e4c.js.map",
+  "shine-customer-search.js": "/packs/shine-customer-search-37f86e986407a82bab22.js",
+  "shine-customer-search.js.map": "/packs/shine-customer-search-37f86e986407a82bab22.js.map"
 }
