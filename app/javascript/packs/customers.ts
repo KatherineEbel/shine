@@ -1,9 +1,9 @@
+import 'polyfills'
 import {NgModule} from "@angular/core";
 import {FormsModule} from "@angular/forms";
-import {CustomerSearchComponent} from "./customers.component";
+import { CustomerSearchComponent } from "../CustomerSearchComponent";
 import {BrowserModule} from "@angular/platform-browser";
 import {platformBrowserDynamic} from "@angular/platform-browser-dynamic";
-import {HttpModule} from "@angular/http";
 import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
