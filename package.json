@@ -1,6 +1,9 @@
 {
   "name": "shine",
   "private": true,
+  "scripts": {
+    "test": "NODE_ENV=test karma start --single-run --browsers ChromeHeadless spec/javascript/karma.conf.js"
+  },
   "dependencies": {
     "@angular/common": "^6.1.4",
     "@angular/compiler": "^6.1.4",
@@ -21,6 +24,12 @@
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
+    "jasmine-core": "^3.2.1",
+    "karma": "^3.0.0",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-jasmine": "^1.1.2",
+    "karma-webpack": "^3.0.0",
+    "testdouble": "^3.8.1",
     "webpack-dev-server": "2.11.2"
   }
 }
