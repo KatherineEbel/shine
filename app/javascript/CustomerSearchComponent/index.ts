@@ -1,6 +1,7 @@
-import {Component, Injectable} from '@angular/core';
+import {Component, Injectable, OnInit} from '@angular/core';
 import template from './template.html';
 import {HttpClient} from "@angular/common/http";
+import { Router} from "@angular/router";
 
 @Injectable()
 @Component({
@@ -10,7 +11,10 @@ import {HttpClient} from "@angular/common/http";
 export class CustomerSearchComponent {
     keywords: string;
     customers: Array<any>;
-    constructor(private http: HttpClient) {
+    constructor(
+        private http: HttpClient,
+        private router: Router
+    ) {
         this.keywords = '';
         this.customers = null;
     }
@@ -28,6 +32,11 @@ export class CustomerSearchComponent {
             .subscribe(this.onSuccess.bind(this), this.onError.bind(this))
     };
 
+    viewDetails(customer) {
+        this.router.navigate(['/', customer.id])
+    }
+
+
     private onSuccess = (response) => {
         this.customers = response.customers;
     };
@@ -35,4 +44,5 @@ export class CustomerSearchComponent {
     private onError = (response) => {
         window.alert(response);
     };
+
 }

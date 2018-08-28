@@ -7,11 +7,14 @@ class CustomersController < ApplicationController
     @page = (params[:page] || 0).to_i
     @customers = customers
     respond_to do |format|
-      format.html {}
-      format.json do
-        render json: { customers: @customers }
-      end
+      format.html { redirect_to customers_ng_path }
+      format.json { render json: { customers: @customers } }
     end
+  end
+
+  def ng
+    @base_url = '/customers/ng'
+    render :index
   end
 
   private
