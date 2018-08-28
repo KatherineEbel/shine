@@ -25,12 +25,12 @@ export class CustomerSearchComponent {
 
     onSearch = () => {
         this.http.get(
-            `/customers.json?keywords=${this.keywords}`
+            `/customers.json?keywords=${this.keywords}`, { observe: 'response'}
         ).subscribe(this.onSuccess.bind(this), this.onError.bind(this))
     };
 
     private onSuccess = (response) => {
-        this.customers = response.customers;
+        this.customers = response.json().customers;
     };
 
     private onError = (response) => {
