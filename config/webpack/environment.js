@@ -15,6 +15,8 @@ environment.loaders.append('html', {
             keepClosingSlash: true,
             caseSensitive: true,
             conservativeCollapse: true,
+            customAttrSurround: [ [/#/, /(?:)/], [/\*/, /(?:)/], [/\[?\(?/, /(?:)/] ],
+            customAttrAssign: [ /\)?\]?=/ ]
         }
     }]
 });

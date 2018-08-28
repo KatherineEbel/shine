@@ -1,5 +1,5 @@
 import {Component, Injectable} from '@angular/core';
-import template from './shine-customer-search.component.html';
+import template from './template.html';
 import {HttpClient} from "@angular/common/http";
 
 @Injectable()
@@ -24,13 +24,12 @@ export class CustomerSearchComponent {
     }
 
     onSearch = () => {
-        this.http.get(
-            `/customers.json?keywords=${this.keywords}`, { observe: 'response'}
-        ).subscribe(this.onSuccess.bind(this), this.onError.bind(this))
+        this.http.get(`/customers.json?keywords=${this.keywords}`)
+            .subscribe(this.onSuccess.bind(this), this.onError.bind(this))
     };
 
     private onSuccess = (response) => {
-        this.customers = response.json().customers;
+        this.customers = response.customers;
     };
 
     private onError = (response) => {

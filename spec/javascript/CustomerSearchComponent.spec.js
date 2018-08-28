@@ -58,15 +58,14 @@ describe('CustomerSearchComponent', function () {
             ];
 
             beforeEach(function () {
-                const response = td.object(['json']);
-                td.when(response.json()).thenReturn({ customers });
+                const response = {customers};
                 const observable = td.object(['subscribe']);
                 td.when(observable.subscribe(
                     td.callback(response),
                     td.matchers.isA(Function))).thenReturn();
                 mockHttp = td.object(['get']);
                 td.when(mockHttp
-                    .get('/customers.json?keywords=pat', td.matchers.isA(Object)))
+                    .get('/customers.json?keywords=pat'))
                     .thenReturn(observable);
                 component = new CustomerSearchComponent(mockHttp);
 
@@ -92,10 +91,7 @@ describe('CustomerSearchComponent', function () {
 
                     mockHttp = td.object(['get']);
                     td.when(mockHttp
-                        .get(
-                            '/customers.json?keywords=pat',
-                            td.matchers.isA(Object)
-                        ))
+                        .get('/customers.json?keywords=pat'))
                         .thenReturn(observable);
                     component = new CustomerSearchComponent(mockHttp);
                 });
