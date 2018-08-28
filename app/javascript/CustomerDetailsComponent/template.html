@@ -1,10 +1,182 @@
 <section class="customer-details" *ngIf="customer">
-    <h1>Customer Details {{ customer.id }}</h1>
-    <h2>{{ customer.first_name }} {{ customer.last_name }}</h2>
-    <h3>{{ customer.email }}</h3>
-    <h4>{{ customer.username }}</h4>
-    <h5>
-        <small class="text-uppercase">Joined</small>
-        {{ customer.created_at }}
-    </h5>
+    <form>
+        <div class="row d-flex flex-wrap">
+            <div class="col-md-6 d-flex flex-column justify-content-between">
+                <section class="card m-1">
+                    <header class="card-header bg-info text-white">
+                        <h1 class="h3">Customer</h1>
+                    </header>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label class="sr-only" for="first-name">First Name</label>
+                                    <input type="text" class="form-control" id="first-name"
+                                           name="first-name" value="Bob"
+                                    />
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label class="sr-only" for="last-name">Last Name</label>
+                                    <input type="text" class="form-control" id="last-name"
+                                           name="last-name" value="Jones"
+                                    />
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <label class="sr-only" for="username">Username</label>
+                                <div class="input-group">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text">@</span>
+                                    </div>
+                                    <input type="text" class="form-control" id="username"
+                                           name="username" value="bobert123"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group p-1">
+                            <label for="email" class="sr-only">Email</label>
+                            <input type="text" class="form-control" id="email"
+                                   name="email" value="bobbyj@somewhere.net"
+                            />
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <label for="joined">Joined</label> 12/13/2014
+                    </div>
+
+                </section>
+                <section class="card">
+                    <header class="card-header bg-info text-white">
+                        <h2 class="h3">Shipping Address</h2>
+                    </header>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label class="sr-only" for="street-address">Street Address
+                            </label>
+                            <input type="text" class="form-control"
+                                   value="123 Any St"
+                                   name="street-address" id="street-address">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-control"
+                                   for="street-address-extra">Street Address Extra
+                            </label>
+                            <input class="form-control" id="street-address-extra"
+                                   name="street-address-extra"
+                                   value="Unit 101"
+                                   type="text">
+                        </div>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <label for="city"
+                                           class="sr-only">City
+                                    </label>
+                                    <input type="text" class="form-control"
+                                           id="city" value="Washington"
+                                           name="city"
+                                    />
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label for="state" class="sr-only">
+                                        State
+                                    </label>
+                                    <input name="state" id="state" value="DC"
+                                           type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="zip" class="sr-only">Zip</label>
+                                    <input name="zip" id="zip" value="20001"
+                                           type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </section>
+            </div>
+            <div class="col-md-6 d-flex flex-column align-self-center">
+                <section class="card m-1">
+                    <header class="card-header bg-info text-white">
+                        <h1 class="h3">Billing Info</h1>
+                    </header>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <p class="h4">
+                                    ****-****-****-1234
+                                    <span class="badge badge-success">VISA</span>
+                                </p>
+                                <p>
+                                    <label>Expires:</label> 04/19
+                                </p>
+                            </div>
+                            <div class="col-md-5 text-right">
+                                <button class="btn btn-lg btn-outline-secondary">
+                                    View Details
+                                </button>
+                            </div>
+                        </div>
+                        <h3 class="h4">Billing Address
+                            <input type="checkbox"/>
+                            <small class="ml-2">Same as shipping?</small>
+                        </h3>
+                        <div class="form-group">
+                            <label class="sr-only" for="billing-street-address">Street Address
+                            </label>
+                            <input type="text" class="form-control"
+                                   value="123 Any St"
+                                   name="street-address" id="billing-street-address">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-control"
+                                   for="billing-street-address-extra">Street Address Extra
+                            </label>
+                            <input class="form-control" id="billing-street-address-extra"
+                                   name="street-address-extra"
+                                   value="Unit 101"
+                                   type="text">
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="billing-city"
+                                           class="sr-only">City
+                                    </label>
+                                    <input type="text" class="form-control"
+                                           id="billing-city" value="Washington"
+                                           name="billing-city"
+                                    />
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <div class="form-group">
+                                    <label for="billing-state" class="sr-only">
+                                        State
+                                    </label>
+                                    <input name="state" id="billing-state" value="DC"
+                                           type="text" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="billing-zip" class="sr-only">Zip</label>
+                                    <input name="zip" id="billing-zip" value="20001"
+                                           type="text" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </form>
 </section>
