@@ -70,9 +70,9 @@ feature 'Customer Search' do
 
     within 'section.search-results' do
       expect(page).to have_content('Results')
-      expect(page.all('ol li.list-group-item').count).to eq(4)
-
       list_group_items = page.all('ol li.list-group-item')
+      expect(list_group_items.count).to eq(4)
+
       expect(list_group_items[0]).to have_content('Pat')
       expect(list_group_items[0]).to have_content('Jones')
       expect(list_group_items[1]).to have_content('Patricia')

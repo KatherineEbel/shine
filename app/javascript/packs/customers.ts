@@ -5,7 +5,7 @@ import { CustomerSearchComponent } from "../CustomerSearchComponent";
 import {BrowserModule} from "@angular/platform-browser";
 import {platformBrowserDynamic} from "@angular/platform-browser-dynamic";
 import {HttpClientModule} from "@angular/common/http";
-import {CustomerDetailsComponent} from "../CustomerDetailscomponent";
+import {CustomerDetailsComponent} from "../CustomerDetailsComponent";
 import { RouterModule} from "@angular/router";
 
 const router = RouterModule.forRoot(

@@ -1,4 +1,4 @@
-import {Component, Injectable, OnInit} from '@angular/core';
+import {Component, Injectable } from '@angular/core';
 import template from './template.html';
 import {HttpClient} from "@angular/common/http";
 import { Router} from "@angular/router";
